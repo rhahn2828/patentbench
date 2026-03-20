@@ -1,0 +1,63 @@
+{
+  "name": "Legal Accuracy",
+  "version": "1.0",
+  "description": "Evaluates the correctness and appropriateness of legal citations, statutory references, MPEP sections, and case law application in patent prosecution responses.",
+  "dimensions": [
+    {
+      "name": "statutory_correctness",
+      "description": "Are 35 U.S.C. section references correct and appropriately applied to the rejection type?",
+      "weight": 1.5,
+      "scale_min": 1,
+      "scale_max": 5,
+      "criteria": {
+        "1": "Cites wrong statute (e.g., argues 101 when rejection is under 103) or fabricates statutory provisions that do not exist",
+        "2": "Cites correct statute but misapplies the legal standard or confuses subsections (e.g., 112(a) vs 112(b))",
+        "3": "Cites correct statute and generally applies the right legal standard, but with some imprecision or incomplete application",
+        "4": "Correctly cites and applies statute with proper legal standard; minor omissions in nuanced application",
+        "5": "Flawless statutory citation and application; demonstrates deep understanding of the statute's requirements and how they apply to the specific facts"
+      }
+    },
+    {
+      "name": "mpep_accuracy",
+      "description": "Are MPEP section references valid and correctly applied?",
+      "weight": 1.0,
+      "scale_min": 1,
+      "scale_max": 5,
+      "criteria": {
+        "1": "Cites fabricated or non-existent MPEP sections; completely wrong MPEP references",
+        "2": "Cites real MPEP sections but they are not relevant to the issue at hand",
+        "3": "Cites appropriate MPEP sections but does not fully or accurately represent their content",
+        "4": "Correctly cites and applies relevant MPEP sections with only minor imprecisions",
+        "5": "Precisely cites the most relevant MPEP sections and accurately represents their guidance; uses MPEP strategically to support arguments"
+      }
+    },
+    {
+      "name": "case_law_accuracy",
+      "description": "Are case law citations real, correctly cited, and properly applied?",
+      "weight": 1.5,
+      "scale_min": 1,
+      "scale_max": 5,
+      "criteria": {
+        "1": "Fabricates case citations that do not exist or grossly misrepresents holdings of real cases",
+        "2": "Cites real cases but misapplies their holdings or uses them out of context",
+        "3": "Cites appropriate cases with generally correct holdings but may miss nuances or use secondary holdings",
+        "4": "Correctly cites and applies relevant case law with accurate representation of holdings",
+        "5": "Expert-level case law usage; cites the most on-point cases, accurately represents holdings, and draws precise analogies to the current facts"
+      }
+    },
+    {
+      "name": "procedural_correctness",
+      "description": "Are procedural requirements, deadlines, and filing standards correctly addressed?",
+      "weight": 0.5,
+      "scale_min": 1,
+      "scale_max": 5,
+      "criteria": {
+        "1": "Contains serious procedural errors that would result in abandonment or loss of rights",
+        "2": "Contains procedural errors that would require correction (e.g., wrong fee, missed requirement)",
+        "3": "Procedurally adequate but may miss optional beneficial procedures",
+        "4": "Procedurally correct with minor omissions in best-practice procedures",
+        "5": "Demonstrates complete procedural awareness including all required and recommended practices"
+      }
+    }
+  ]
+}

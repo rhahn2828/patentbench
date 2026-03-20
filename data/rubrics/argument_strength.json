@@ -1,0 +1,77 @@
+{
+  "name": "Argument Strength",
+  "version": "1.0",
+  "description": "Evaluates the quality, persuasiveness, and completeness of patent prosecution arguments in Office Action responses.",
+  "dimensions": [
+    {
+      "name": "legal_reasoning",
+      "description": "Quality of the legal reasoning and logical structure of arguments",
+      "weight": 2.0,
+      "scale_min": 1,
+      "scale_max": 5,
+      "criteria": {
+        "1": "No coherent legal reasoning; arguments are conclusory without supporting analysis",
+        "2": "Basic legal reasoning present but contains logical gaps or non-sequiturs; arguments would not persuade an examiner",
+        "3": "Adequate legal reasoning with a clear logical flow; addresses the main issues but may miss secondary arguments",
+        "4": "Strong legal reasoning with well-structured arguments; addresses primary and secondary issues; would likely persuade a reasonable examiner",
+        "5": "Exceptional legal reasoning with airtight logic; anticipates and addresses counterarguments; uses multiple independent lines of argument; would persuade even a skeptical examiner"
+      }
+    },
+    {
+      "name": "factual_grounding",
+      "description": "How well arguments are grounded in the specific facts of the case (claim language, prior art disclosures, specification)",
+      "weight": 1.5,
+      "scale_min": 1,
+      "scale_max": 5,
+      "criteria": {
+        "1": "Generic arguments not tied to the specific claims or prior art; could apply to any rejection",
+        "2": "References specific claims or prior art but analysis is superficial; does not engage with the details",
+        "3": "Engages with specific claim limitations and prior art disclosures; identifies key differences but analysis could be deeper",
+        "4": "Thoroughly analyzes specific claim limitations against prior art disclosures; pinpoints exact missing elements or teachings",
+        "5": "Expert-level factual analysis; precisely maps each claim limitation to specific prior art paragraphs/columns; identifies subtle but critical distinctions"
+      }
+    },
+    {
+      "name": "completeness",
+      "description": "Does the response address all rejected claims, all grounds of rejection, and all required elements?",
+      "weight": 1.0,
+      "scale_min": 1,
+      "scale_max": 5,
+      "criteria": {
+        "1": "Addresses fewer than half of the rejections or claims; major omissions",
+        "2": "Addresses most rejections but misses at least one; some claims left unaddressed",
+        "3": "Addresses all rejections and claims at a basic level; may lack depth on some points",
+        "4": "Comprehensively addresses all rejections and claims with adequate depth",
+        "5": "Exhaustively addresses every rejection, every claim, and includes proactive arguments (e.g., unexpected results, secondary considerations, teaching away)"
+      }
+    },
+    {
+      "name": "persuasiveness",
+      "description": "Overall persuasive impact of the response as evaluated by a patent examiner or PTAB judge",
+      "weight": 1.5,
+      "scale_min": 1,
+      "scale_max": 5,
+      "criteria": {
+        "1": "Not persuasive; an examiner would maintain the rejection without further consideration",
+        "2": "Slightly persuasive; raises a point worth considering but ultimately unconvincing",
+        "3": "Moderately persuasive; an examiner would need to thoughtfully address the arguments in the next action",
+        "4": "Highly persuasive; a reasonable examiner would likely withdraw the rejection or invite an interview",
+        "5": "Compelling; arguments are so strong that maintaining the rejection would be difficult to sustain on appeal"
+      }
+    },
+    {
+      "name": "professional_quality",
+      "description": "Writing quality, tone, organization, and adherence to patent prosecution conventions",
+      "weight": 0.5,
+      "scale_min": 1,
+      "scale_max": 5,
+      "criteria": {
+        "1": "Unprofessional tone or format; would embarrass the practitioner if filed",
+        "2": "Generally professional but with notable formatting or tone issues",
+        "3": "Adequate professional quality; follows basic patent prosecution conventions",
+        "4": "High professional quality; well-organized with clear headings and respectful tone",
+        "5": "Exemplary professional quality; reads like a response from a top-tier patent firm with perfect organization, clear structure, and authoritative tone"
+      }
+    }
+  ]
+}
