@@ -10,7 +10,7 @@ import httpx
 from patentbench.models.base import BaseModelAdapter, GenerationConfig
 
 
-ABIGAIL_API_BASE = "https://abigail.app/api/v1"
+ABIGAIL_API_BASE = "https://abigail.app/api/v1/patentbench"
 
 
 class AbigailAdapter(BaseModelAdapter):
@@ -64,7 +64,7 @@ class AbigailAdapter(BaseModelAdapter):
         }
 
         response = self.client.post(
-            f"{self.api_base}/benchmark/generate",
+            f"{self.api_base}/generate",
             json=payload,
             headers=headers,
         )
