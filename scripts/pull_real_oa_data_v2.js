@@ -1,6 +1,6 @@
 /**
  * Pull real Office Action data from USPTO ODP API (api.uspto.gov).
- * Uses the same API endpoint as abigail-v3's USPTO client.
+ * Uses the USPTO ODP API endpoint.
  */
 const https = require('https');
 const fs = require('fs');

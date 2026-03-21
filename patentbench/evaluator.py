@@ -294,9 +294,8 @@ class DeterministicEvaluator(BaseEvaluator):
 class LLMJudgeEvaluator(BaseEvaluator):
     """Rubric-based evaluation using a calibrated LLM judge.
 
-    Uses an LLM (default: Claude) to score model outputs across multiple
-    quality dimensions defined by rubrics. Mirrors the EvaluationOrchestrator
-    pattern from abigail-v3.
+    Uses an LLM judge to score model outputs across multiple
+    quality dimensions defined by rubrics.
     """
 
     def __init__(

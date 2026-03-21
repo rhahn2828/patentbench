@@ -1,8 +1,7 @@
 """USPTO Office Action loader and parser.
 
 Loads real Office Actions from the USPTO Patent Examination Data System (PEDS)
-and parses XML office actions. The RejectionType enum and parsing logic mirror
-the approach used in abigail-v3's xml_office_action_parser.py.
+and parses XML office actions into structured data.
 """
 
 from __future__ import annotations
@@ -174,8 +173,7 @@ class USPTOPedsClient:
 class OfficeActionParser:
     """Parses USPTO Office Actions from XML format.
 
-    Mirrors the parsing approach from abigail-v3's xml_office_action_parser.py,
-    extracting rejections, claims, grounds, and prior art references.
+    Extracts rejections, claims, grounds, and prior art references.
     """
 
     # Patterns for identifying rejection types in OA text

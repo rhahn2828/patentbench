@@ -7,7 +7,7 @@
 
 ## CODE TO ENABLE
 
-Existing abigail-v3 code that maps directly to PatentBench needs:
+Existing ABIGAIL code that maps directly to PatentBench needs:
 
 | PatentBench Need | Existing Code | Notes |
 |---|---|---|
@@ -46,7 +46,7 @@ Existing abigail-v3 code that maps directly to PatentBench needs:
   - Unit tests (pytest)
   - Rubric schema validation
   - Test case format validation
-  Leverage: abigail-v3 `.github/workflows/` for patterns.
+  Leverage: ABIGAIL `.github/workflows/` for patterns.
 
 - [ ] **P0** | Owner: `___` | Effort: 4h | Deps: Repo init
   Create Python package structure (`pyproject.toml`, `bench/` module):
@@ -63,7 +63,7 @@ Existing abigail-v3 code that maps directly to PatentBench needs:
   - `anthropic_adapter.py` — Claude Sonnet
   - `google_adapter.py` — Gemini
   - `abigail_adapter.py` — ABIGAIL API
-  Leverage: abigail-v3 LLM client patterns.
+  Leverage: ABIGAIL LLM client patterns.
 
 - [ ] **P1** | Owner: `___` | Effort: 2h | Deps: Repo init
   Set up pre-commit hooks: black, isort, ruff, JSON schema validation for test cases.
